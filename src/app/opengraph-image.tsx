@@ -1,7 +1,8 @@
 import { ImageResponse } from "next/og";
 
 export const dynamic = "force-static";
-export const alt = "ASQIOS — Investment Intelligence. Reimagined.";
+export const alt =
+  "ASQIOS — AI-native Shariah-compliant investment intelligence and research platform.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -17,7 +18,7 @@ export default function OpengraphImage() {
           justifyContent: "space-between",
           background:
             "radial-gradient(60% 80% at 50% 0%, #0B1220 0%, #050A14 60%)",
-          padding: "72px",
+          padding: "68px",
           fontFamily: "sans-serif",
         }}
       >
@@ -43,21 +44,21 @@ export default function OpengraphImage() {
           </div>
         </div>
 
-        <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 22 }}>
           <div
             style={{
-              color: "#94A3B8",
-              fontSize: 22,
-              letterSpacing: 6,
+              color: "#D4AF37",
+              fontSize: 21,
+              letterSpacing: 4,
               textTransform: "uppercase",
             }}
           >
-            Institutional Investment Intelligence
+            AI-Native · Shariah-Compliant
           </div>
           <div
             style={{
               color: "#F8FAFC",
-              fontSize: 86,
+              fontSize: 78,
               fontWeight: 700,
               lineHeight: 1.02,
               letterSpacing: -3,
@@ -68,12 +69,23 @@ export default function OpengraphImage() {
             <span>Investment Intelligence.</span>
             <span style={{ color: "#D4AF37" }}>Reimagined.</span>
           </div>
+          <div
+            style={{
+              color: "#C7D2E4",
+              fontSize: 31,
+              lineHeight: 1.3,
+              maxWidth: 1010,
+            }}
+          >
+            AI-native Shariah-compliant investment intelligence &amp; research
+            platform.
+          </div>
         </div>
 
         <div
           style={{
             color: "#94A3B8",
-            fontSize: 24,
+            fontSize: 23,
             letterSpacing: 4,
             display: "flex",
             gap: 16,
@@ -92,3 +104,4 @@ export default function OpengraphImage() {
     { ...size },
   );
 }
+
