@@ -6,7 +6,7 @@ import { IntelligenceOrb } from "@/components/IntelligenceOrb";
 import { ParticleField } from "@/components/ParticleField";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { Container } from "@/components/ui/Container";
-import { ORB_LABELS, SITE } from "@/lib/site";
+import { ORB_LABELS, DEFINITION } from "@/lib/site";
 import { EASE } from "@/lib/motion";
 
 export function Hero() {
@@ -48,11 +48,11 @@ export function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: EASE }}
-            className="mb-6 inline-flex items-center gap-2 rounded-full glass px-4 py-2"
+            className="mb-6 flex max-w-md items-center gap-3"
           >
-            <span className="h-1.5 w-1.5 rounded-full bg-success" />
-            <span className="font-mono text-[0.68rem] uppercase tracking-widest text-ink-muted">
-              {SITE.positioning}
+            <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
+            <span className="font-mono text-[0.62rem] uppercase leading-relaxed tracking-[0.18em] text-ink/90">
+              {DEFINITION.label}
             </span>
           </motion.div>
 

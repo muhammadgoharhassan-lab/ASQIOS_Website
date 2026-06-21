@@ -10,19 +10,43 @@ export const SITE = {
   tagline: "Research • Governance • AI • Shariah",
   positioning: "Institutional Investment Intelligence",
   description:
-    "ASQIOS is an AI-native investment intelligence platform combining quantitative research, governance controls, Shariah compliance, and machine-assisted analysis into a unified institutional framework.",
+    "ASQIOS is an AI-native Shariah-compliant investment intelligence and research platform — combining research, governance, artificial intelligence, and disciplined decision frameworks.",
   email: "contact@asqios.com",
   linkedin: "https://www.linkedin.com/company/asqios",
 } as const;
 
+/**
+ * The canonical definition of ASQIOS. Used consistently across the site so a
+ * visitor understands exactly what ASQIOS is within seconds. Do not paraphrase
+ * into marketing language — this is the brand's identity statement.
+ */
+export const DEFINITION = {
+  /** Title-case label form for eyebrows, hero, and footer. */
+  label:
+    "AI-Native Shariah-Compliant Investment Intelligence & Research Platform",
+  /** Sentence form. */
+  canonical:
+    "AI-native Shariah-compliant investment intelligence and research platform.",
+  /** Opening statement for the "What is ASQIOS" section. */
+  whatIs:
+    "ASQIOS is an AI-native Shariah-compliant investment intelligence and research platform focused on combining research, governance, artificial intelligence, and disciplined decision frameworks.",
+  /** Lead line for the dedicated About definition block. */
+  aboutLead:
+    "ASQIOS is an AI-native Shariah-compliant investment intelligence and research platform.",
+  /** Supporting line for the About definition block. */
+  aboutBody:
+    "It exists to explore how research, governance, artificial intelligence, and ethical constraints can be combined into a disciplined framework for investment decision-making.",
+} as const;
+
 export const NAV_LINKS = [
-  { label: "Platform", href: "#platform" },
-  { label: "Architecture", href: "#architecture" },
-  { label: "Constitution", href: "#constitution" },
-  { label: "Governance", href: "#governance" },
-  { label: "Shariah", href: "#shariah" },
-  { label: "Roadmap", href: "#roadmap" },
-  { label: "Research", href: "#research" },
+  { label: "About", href: "/about/" },
+  { label: "Platform", href: "/#platform" },
+  { label: "Architecture", href: "/#architecture" },
+  { label: "Constitution", href: "/#constitution" },
+  { label: "Governance", href: "/#governance" },
+  { label: "Shariah", href: "/#shariah" },
+  { label: "Roadmap", href: "/#roadmap" },
+  { label: "Research", href: "/#research" },
 ] as const;
 
 export const ORB_LABELS = [
@@ -173,19 +197,19 @@ export const FOOTER_GROUPS = [
   {
     heading: "Platform",
     links: [
-      { label: "Research", href: "#platform" },
-      { label: "Governance", href: "#governance" },
-      { label: "AI", href: "#platform" },
-      { label: "Shariah", href: "#shariah" },
+      { label: "Research", href: "/#platform" },
+      { label: "Governance", href: "/#governance" },
+      { label: "AI", href: "/#platform" },
+      { label: "Shariah", href: "/#shariah" },
     ],
   },
   {
     heading: "Framework",
     links: [
-      { label: "Architecture", href: "#architecture" },
-      { label: "Constitution", href: "#constitution" },
-      { label: "Roadmap", href: "#roadmap" },
-      { label: "Research Library", href: "#research" },
+      { label: "About", href: "/about/" },
+      { label: "Architecture", href: "/#architecture" },
+      { label: "Constitution", href: "/#constitution" },
+      { label: "Roadmap", href: "/#roadmap" },
     ],
   },
 ] as const;

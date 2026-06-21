@@ -28,7 +28,7 @@ export function Navbar() {
       )}
     >
       <Container className="flex h-16 items-center justify-between md:h-20">
-        <a href="#top" className="group flex items-center gap-3">
+        <a href="/#top" className="group flex items-center gap-3">
           <Logo />
           <span className="font-display text-lg font-semibold tracking-tightest text-ink">
             {SITE.name}
@@ -49,7 +49,7 @@ export function Navbar() {
 
         <div className="hidden lg:block">
           <a
-            href="#contact"
+            href="/#contact"
             className="glass inline-flex items-center rounded-full px-5 py-2.5 font-mono text-[0.7rem] uppercase tracking-widest text-ink transition-all hover:border-azure/40 hover:shadow-glow"
           >
             Contact
@@ -88,7 +88,7 @@ export function Navbar() {
                 </a>
               ))}
               <a
-                href="#contact"
+                href="/#contact"
                 onClick={() => setOpen(false)}
                 className="mt-2 rounded-lg bg-ink px-3 py-3 text-center font-mono text-xs uppercase tracking-widest text-bg"
               >

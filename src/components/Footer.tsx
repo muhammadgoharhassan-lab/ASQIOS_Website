@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Mail, Linkedin, ArrowUpRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
-import { SITE, FOOTER_GROUPS } from "@/lib/site";
+import { SITE, FOOTER_GROUPS, DEFINITION } from "@/lib/site";
 import { fadeUp, viewportOnce } from "@/lib/motion";
 
 export function Footer() {
@@ -65,7 +65,7 @@ export function Footer() {
               </span>
             </div>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-ink-muted">
-              {SITE.positioning}.
+              {DEFINITION.label}
             </p>
             <p className="mt-3 font-mono text-[0.62rem] uppercase tracking-widest text-gold/80">
               {SITE.tagline}

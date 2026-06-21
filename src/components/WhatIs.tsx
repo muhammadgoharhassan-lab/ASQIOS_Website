@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { DEFINITION } from "@/lib/site";
 import { fadeUp, stagger, viewportOnce } from "@/lib/motion";
 
 const FACETS = [
@@ -25,7 +26,7 @@ export function WhatIs() {
                 <span className="text-gradient">Evidence-Based</span> Investing
               </>
             }
-            description="ASQIOS is an AI-native investment intelligence platform that combines quantitative research, governance controls, Shariah compliance, and machine-assisted analysis into a unified institutional framework."
+            description={DEFINITION.whatIs}
           />
 
           <motion.div
