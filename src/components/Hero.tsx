@@ -13,7 +13,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative flex min-h-[100svh] items-center overflow-hidden pt-24"
+      className="relative flex min-h-[100svh] flex-col justify-center overflow-hidden pt-24 lg:flex-row lg:items-center"
     >
       {/* Ambient depth layers (behind everything) */}
       <div className="pointer-events-none absolute inset-0 -z-10">
@@ -22,23 +22,24 @@ export function Hero() {
         <div className="absolute left-1/2 top-1/2 h-[120vh] w-[120vh] -translate-x-1/2 -translate-y-1/2 bg-radial-glow" />
       </div>
 
-      {/* Full-screen Intelligence Orb. Centered on mobile; shifted right and
-          scaled up on desktop so it fills the viewport behind the headline. */}
-      <div className="absolute inset-0 z-0 lg:translate-x-[14%] lg:scale-110">
+      {/* Intelligence Orb.
+          Mobile: contained square at the top of the hero (original layout).
+          Desktop (lg+): a full-viewport background, shifted right and scaled up
+          so it fills the screen behind the headline. */}
+      <div className="relative z-0 mx-auto mb-2 aspect-square w-full max-w-[480px] lg:absolute lg:inset-0 lg:m-0 lg:aspect-auto lg:max-w-none lg:translate-x-[14%] lg:scale-110">
         <ErrorBoundary>
           <IntelligenceOrb />
         </ErrorBoundary>
 
-        {/* Orbiting labels hug the orb's rim; hidden on small screens to keep
-            the mobile headline clean. */}
-        <div className="absolute inset-0 hidden items-center justify-center lg:flex">
+        {/* Orbiting labels hug the orb's rim at both sizes */}
+        <div className="absolute inset-0 flex items-center justify-center">
           <OrbLabels />
         </div>
       </div>
 
-      {/* Legibility scrim — keeps copy readable over the orb */}
-      <div className="pointer-events-none absolute inset-0 z-[5] bg-gradient-to-r from-bg via-bg/75 to-transparent" />
-      <div className="pointer-events-none absolute inset-0 z-[5] bg-gradient-to-t from-bg via-transparent to-transparent" />
+      {/* Legibility scrim — desktop only (mobile keeps text below the orb) */}
+      <div className="pointer-events-none absolute inset-0 z-[5] hidden bg-gradient-to-r from-bg via-bg/75 to-transparent lg:block" />
+      <div className="pointer-events-none absolute inset-0 z-[5] hidden bg-gradient-to-t from-bg via-transparent to-transparent lg:block" />
 
       {/* Copy */}
       <Container className="relative z-10">
@@ -113,10 +114,10 @@ export function Hero() {
 
 function OrbLabels() {
   return (
-    <div className="relative aspect-square h-[min(82vh,820px)] motion-safe:animate-[spin_48s_linear_infinite]">
+    <div className="relative aspect-square w-full max-w-[480px] motion-safe:animate-[spin_48s_linear_infinite] lg:h-[min(82vh,820px)] lg:w-[min(82vh,820px)] lg:max-w-none">
       {ORB_LABELS.map((label, i) => {
         const angle = (i / ORB_LABELS.length) * Math.PI * 2;
-        const radius = 47; // percent
+        const radius = 46; // percent
         const x = 50 + Math.cos(angle) * radius;
         const y = 50 + Math.sin(angle) * radius;
         return (
