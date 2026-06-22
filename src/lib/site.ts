@@ -14,6 +14,7 @@ export const SITE = {
   email: "contact@asqios.com",
   phone: "+966530635533",
   phoneDisplay: "+966 53 063 5533",
+  whatsapp: "https://wa.me/966530635533",
   linkedin: "https://www.linkedin.com/company/asqios",
 } as const;
 
