@@ -164,9 +164,39 @@ global from the first commit.
 - **GR-7 — Accounting-standard awareness.** Canonical mappings and methodology base definitions may
   be parameterized by accounting standard (GAAP / IFRS / JP-GAAP / CAS / SOCPA).
 
+## Mapping-confidence invariants (additive — see [Mapping Confidence Framework](./mapping-confidence-framework.md))
+
+The canonical boundary (taxonomy→canonical mapping) concentrates all cross-taxonomy semantic risk,
+so a mapping is hardened into a **first-class governed artifact** parallel to a methodology. These
+invariants are **additive** — none reopens a frozen decision; they elaborate GR-1 and decision D3.
+
+- **MC-1 — Mapping Registry.** Mappings are governed artifacts in a registry parallel to the
+  Methodology Registry (same versioning / approval / change-event / impact-set machinery).
+- **MC-2 — Decomposed confidence.** Mapping confidence is derived weakest-link from six factors
+  (semantic equivalence, definitional authority, transformation complexity, cross-standard stability,
+  dimensional cleanliness, review/corroboration) — never a bare scalar; always explainable.
+- **MC-3 — Confidence → DQS.** Mapping confidence reduces the **DQS** of the canonical fact (not
+  STS); overall fact confidence ≤ mapping confidence (weakest-link).
+- **MC-4 — Tier-gated certification.** Tier A `[0.95,1]` auto · B `[0.85,0.95)` / C `[0.70,0.85)`
+  require approval and cap grade · **D `[0,0.70)` blocked** from certified pipelines (fail-closed).
+- **MC-5 — Methodology minimum tier.** Methodologies declare a minimum mapping tier per required
+  input; below it, fail-closed to CONDITIONAL — never a silent PASS on a weak mapping.
+- **MC-6 — Bitemporal + pinned.** Mappings are bitemporal; evidence bundles pin `mapping_version`;
+  supersession triggers impact-set re-evaluation. Historical decisions stay reproducible.
+- **MC-7 — Mandatory evidence.** A content-addressed Mapping Evidence Record (standard citation,
+  taxonomy doc, analyst rationale, prior-mapping lineage, corroboration) is required; no evidence ⇒
+  cannot certify.
+- **MC-8 — Author ≠ approver.** Separation of authoring and approving authority; tier-appropriate
+  approver.
+- **MC-9 — Graph validation.** Conflict / circular / many-to-one / one-to-many / version-drift /
+  deprecated / orphan checks gate publication and run continuously; orphans quarantine facts.
+- **MC-10 — Islamic-finance safeguard.** Mappings of Islamic-finance instruments (sukuk, murabaha /
+  ijara receivables, takaful) to `InterestBearingDebt` / `NonPermissibleIncome` default to low
+  confidence + mandatory analyst review; never auto-certified.
+
 ## Next artifact
 
 The next deliverable is **still design, not code**: the
 [single vertical-slice spec](./vertical-slice-spec.md), which proves every frozen invariant
-(including GR-1…GR-7's global record shapes) end-to-end on one security before any breadth
-build-out.
+(including GR-1…GR-7's global record shapes and the MC mapping-confidence controls) end-to-end on one
+security before any breadth build-out.
