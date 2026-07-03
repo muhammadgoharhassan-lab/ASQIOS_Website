@@ -6,7 +6,7 @@ import { IntelligenceOrb } from "@/components/IntelligenceOrb";
 import { ParticleField } from "@/components/ParticleField";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { Container } from "@/components/ui/Container";
-import { ORB_LABELS, DEFINITION } from "@/lib/site";
+import { ORB_LABELS, DEFINITION, SITE } from "@/lib/site";
 import { EASE } from "@/lib/motion";
 
 export function Hero() {
@@ -87,14 +87,20 @@ export function Hero() {
             className="mt-9 flex flex-col gap-3 sm:flex-row"
           >
             <a
-              href="#platform"
+              href={SITE.appUrl}
               className="group inline-flex items-center justify-center gap-2 rounded-full bg-ink px-7 py-3.5 font-mono text-xs uppercase tracking-widest text-bg transition-all duration-300 hover:bg-white hover:shadow-glow"
             >
-              Explore Platform
+              Launch Platform
               <ArrowRight
                 size={15}
                 className="transition-transform duration-300 group-hover:translate-x-1"
               />
+            </a>
+            <a
+              href="#platform"
+              className="group inline-flex items-center justify-center gap-2 rounded-full glass px-7 py-3.5 font-mono text-xs uppercase tracking-widest text-ink transition-all duration-300 hover:border-azure/40 hover:shadow-glow"
+            >
+              Explore Platform
             </a>
             <a
               href="#architecture"

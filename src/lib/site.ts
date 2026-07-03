@@ -7,6 +7,7 @@ export const SITE = {
   name: "ASQIOS",
   domain: "asqios.com",
   url: "https://asqios.com",
+  appUrl: "https://app.asqios.com",
   tagline: "Research • Governance • AI • Shariah",
   positioning: "Institutional Investment Intelligence",
   description:

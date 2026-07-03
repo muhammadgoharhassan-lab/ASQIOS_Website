@@ -47,12 +47,18 @@ export function Navbar() {
           ))}
         </nav>
 
-        <div className="hidden lg:block">
+        <div className="hidden items-center gap-3 lg:flex">
           <a
             href="/#contact"
             className="glass inline-flex items-center rounded-full px-5 py-2.5 font-mono text-[0.7rem] uppercase tracking-widest text-ink transition-all hover:border-azure/40 hover:shadow-glow"
           >
             Contact
+          </a>
+          <a
+            href={SITE.appUrl}
+            className="inline-flex items-center rounded-full bg-ink px-5 py-2.5 font-mono text-[0.7rem] uppercase tracking-widest text-bg transition-all hover:bg-white hover:shadow-glow"
+          >
+            Sign In
           </a>
         </div>
 
@@ -90,9 +96,16 @@ export function Navbar() {
               <a
                 href="/#contact"
                 onClick={() => setOpen(false)}
-                className="mt-2 rounded-lg bg-ink px-3 py-3 text-center font-mono text-xs uppercase tracking-widest text-bg"
+                className="rounded-lg px-3 py-3 font-mono text-xs uppercase tracking-widest text-ink-muted transition-colors hover:bg-white/5 hover:text-ink"
               >
                 Contact
+              </a>
+              <a
+                href={SITE.appUrl}
+                onClick={() => setOpen(false)}
+                className="mt-2 rounded-lg bg-ink px-3 py-3 text-center font-mono text-xs uppercase tracking-widest text-bg"
+              >
+                Sign In
               </a>
             </Container>
           </motion.div>
